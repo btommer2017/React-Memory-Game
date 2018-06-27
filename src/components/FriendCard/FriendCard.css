@@ -10,13 +10,13 @@
 }
 
 .card > .img-container {
-  height: 60%;
+  height: 100%;
   overflow: hidden;
   text-align: center;
   background:#6CADDC;
 }
 .card > .img-container > img {
-  width: 60%
+  width: 100%
 }
 
 .card > .content {
@@ -30,14 +30,14 @@
 }
 
 .card > .content > ul > li {
-  margin-top: 18px;
+  margin-top: 0px;
 }
 
 .card > .remove {
   color: #ff1744;
   font-size: 48px;
   position: absolute;
-  top: -20px;
+  top: 0px;
   right: 5px;
   cursor: pointer;
 }
