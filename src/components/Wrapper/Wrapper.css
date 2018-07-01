@@ -1,6 +1,8 @@
 .wrapper {
   padding-top: 0px;
-  background: #ECEFF1;
+  background: lightblue;
+  background-image: url("ambientBackGround.jpg");
+  /* background-image: url("https://newevolutiondesigns.com/images/freebies/abstract-background-13.jpg"); */
   height: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -9,3 +11,4 @@
   align-content: flex-start;
   overflow: auto;
 }
+C:\Users\btomm\Desktop\ReactHomework\React-Memory-Game\src\components\Wrapper\paper.gif

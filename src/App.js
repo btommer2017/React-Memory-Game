@@ -38,14 +38,14 @@ class App extends Component {
   // Map over this.state.friends and render a randomly selected FriendCard component for each friend object
   render() {
     return ( <Wrapper >
-      <Title > He - Man Villains! </Title> 
+      <Title > He-Man Villains!</Title>    
       <Score > Score: {totalScore.length} </Score> {
         underscore.shuffle(this.state.friends).map(friend => ( <
           FriendCard idChecker = {
             this.idChecker
           }
           id = {friend.id}
-          name = {friend.name}
+          alt = {friend.name}
           image = {friend.image}
           />
         ))
