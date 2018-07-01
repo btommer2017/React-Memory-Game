@@ -2,37 +2,43 @@ import React, { Component } from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Score from "./components/Score";
 import friends from "./friends.json";
 import "./App.css";
+import underscore from "underscore";
 
+const totalScore = [];
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
     friends
   };
 
-  removeFriend = id => {
-    // Filter this.state.friends for friends with an id not equal to the id being removed
-    const friends = this.state.friends.filter(friend => friend.id !== id);
-    // Set this.state.friends equal to the new friends array
+  idChecker = id => {
+    if (totalScore.includes(id)) {
+totalScore.length = 0
+    }
+    else totalScore.push(id);
+    console.log(id);
+    console.log(totalScore);
+    console.log(totalScore.length);
+    // console.log(this.state.friends);
     this.setState({ friends });
   };
 
-  // Map over this.state.friends and render a FriendCard component for each friend object
+  // Map over this.state.friends and render a randomly selected FriendCard component for each friend object
   render() {
     return (
       <Wrapper>
-        <Title>Friends List</Title>
-        {this.state.friends.map(friend => (
+        <Title>He-Man Villains!</Title>
+        <Score>Score: {totalScore.length}</Score>
+        {underscore.shuffle(this.state.friends).map(friend => (
           <FriendCard
-            removeFriend={this.removeFriend}
+          idChecker={this.idChecker}
             id={friend.id}
-            key={friend.id}
             name={friend.name}
             image={friend.image}
-            occupation={friend.occupation}
-            location={friend.location}
-          />
+            />
         ))}
       </Wrapper>
     );
