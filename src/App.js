@@ -6,7 +6,6 @@ import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
 import Score from "./components/Score";
 import friends from "./friends.json";
-import "./App.css";
 import underscore from "underscore";
 
 const totalScore = [];
@@ -22,8 +21,6 @@ class App extends Component {
       alert(`Sorry game over, your score was ` + totalScore.length)
       totalScore.length = 0
     } else totalScore.push(id);
-
-
 
     if (totalScore.length >= highScore) {
           highScore = totalScore.length

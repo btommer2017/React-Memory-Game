@@ -1,6 +1,4 @@
 .wrapper {
-  padding-top: 0px;
-  background: lightblue;
   background-image: url("ambientBackGround.jpg");
   height: 100%;
   display: flex;
