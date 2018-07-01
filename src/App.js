@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, {
+  Component
+} from "react";
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
@@ -16,30 +18,38 @@ class App extends Component {
 
   idChecker = id => {
     if (totalScore.includes(id)) {
-totalScore.length = 0
-    }
-    else totalScore.push(id);
-    console.log(id);
-    console.log(totalScore);
-    console.log(totalScore.length);
+      alert(`Sorry game over, your score was ` + totalScore.length)
+      totalScore.length = 0
+    } else totalScore.push(id);
+
+
+    if (totalScore.length === 12) {
+          alert("Great Job, You Win!!");
+          totalScore.length=0
+       };
+         
+    // console.log;(id);
+    // console.log(totalScore);
+    // console.log(totalScore.length);
     // console.log(this.state.friends);
-    this.setState({ friends });
-  };
+    this.setState({friends})
+  }
 
   // Map over this.state.friends and render a randomly selected FriendCard component for each friend object
   render() {
-    return (
-      <Wrapper>
-        <Title>He-Man Villains!</Title>
-        <Score>Score: {totalScore.length}</Score>
-        {underscore.shuffle(this.state.friends).map(friend => (
-          <FriendCard
-          idChecker={this.idChecker}
-            id={friend.id}
-            name={friend.name}
-            image={friend.image}
-            />
-        ))}
+    return ( <Wrapper >
+      <Title > He - Man Villains! </Title> 
+      <Score > Score: {totalScore.length} </Score> {
+        underscore.shuffle(this.state.friends).map(friend => ( <
+          FriendCard idChecker = {
+            this.idChecker
+          }
+          id = {friend.id}
+          name = {friend.name}
+          image = {friend.image}
+          />
+        ))
+      } 
       </Wrapper>
     );
   }
