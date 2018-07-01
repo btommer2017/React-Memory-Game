@@ -1,9 +1,7 @@
-.title {
+.rules {
   width: 100%;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1rem;
   color: rgb(6, 6, 138);
-  /* margin-bottom: 1px; */
   margin: 5px;
-  margin-top: 20px;
 }

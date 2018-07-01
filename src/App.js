@@ -4,6 +4,7 @@ import React, {
 import FriendCard from "./components/FriendCard";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
+import Rules from "./components/Rules";
 import Score from "./components/Score";
 import friends from "./friends.json";
 import underscore from "underscore";
@@ -41,6 +42,7 @@ class App extends Component {
   render() {
     return ( <Wrapper >
       <Title > He-Man Villains!</Title>    
+      <Rules>Click on all the villains without clicking the same one twice!</Rules>
       <Score > Current Score: {totalScore.length}</Score> 
       <Score > High Score: {highScore} </Score> 
       {
