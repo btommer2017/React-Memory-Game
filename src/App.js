@@ -19,7 +19,7 @@ class App extends Component {
 
   idChecker = id => {
     if (totalScore.includes(id)) {
-      alert(`Sorry game over, your score was ` + totalScore.length)
+      alert(`Sorry game over, your final score was ` + totalScore.length)
       totalScore.length = 0
     } else totalScore.push(id);
 
@@ -27,10 +27,11 @@ class App extends Component {
           highScore = totalScore.length
        };
     if (totalScore.length === 12) {
-          alert("Great Job, You Win!!");
+          alert("Great Job, You Got All 12!!");
           totalScore.length=0
        };
-         
+    
+       // use these logs below to check for functionality of the idChecker()
     // console.log;(id);
     // console.log(totalScore);
     // console.log(totalScore.length);
